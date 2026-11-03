@@ -33,14 +33,10 @@ yarn-error.log*
 pnpm-debug.log*
 
 # ===== 上传与产物 (用户文档/向量不入库) =====
+# 运行时用户上传的文件统一落在 backend/uploads/ 与 backend/data/，整目录忽略即可，
+# 不要用 *.txt / *.md 等文件类型 blanket 忽略，否则会误伤 requirements.txt / 示例文档等源码。
 backend/uploads/
 backend/data/
-*.pdf
-*.docx
-*.doc
-*.txt
-*.md
-!README.md
 
 # ===== 编辑器 / 系统 =====
 .idea/
