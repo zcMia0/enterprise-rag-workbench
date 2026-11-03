@@ -48,6 +48,11 @@ backend/data/
 .DS_Store
 Thumbs.db
 
+# ===== 构建产物 (vue-tsc / vite 自动生成, 非源码) =====
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+
 # ===== 日志 =====
 *.log
 logs/
