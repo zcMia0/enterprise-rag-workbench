@@ -57,8 +57,20 @@ class Settings(BaseSettings):
     chunk_overlap: int = 80
     bm25_top_k: int = 20
     vector_top_k: int = 10
-    rrf_k: int = 60
+    # RRF 常数: 与候选列表长度同量级。60 是面向万级语料的通用值,
+    # 企业库单查询候选仅几十条时取 10 更合适(见 eval/report.md 的参数扫描)。
+    rrf_k: int = 10
+    # 两路融合权重: 词面(BM25) 置 1.0, 向量略降权。
+    # 依据: 弱嵌入下向量路会稀释强词面路; 接入真实嵌入模型后可将向量权重调回 1.0。
+    rrf_weight_vector: float = 0.4
+    rrf_weight_bm25: float = 1.0
     hybrid_fetch_k: int = 30
+    # ---- 证据裁判 (防编造闸门) ----
+    # 判定"证据是否可用"的口径: 问题里的内容词, 在召回的前 N 条证据里至少命中几个。
+    # 取 2 的依据是 eval 实测(见 eval/report.md 第 3 节): 91 道范围内问题接受率 94.5%,
+    # 10 道完全无关问题拒答 10/10。降到 1 会把无关问题也放行, 升到 3 会误拒正常问题。
+    evidence_min_terms: int = 2
+    evidence_gate_top_n: int = 3
 
     # ---- 运行时派生: 是否处于 Mock 模式 ----
     @property

@@ -82,7 +82,7 @@ onMounted(loadThreads)
       <div>
         <div class="card">
           <div class="chat-box" ref="box">
-            <div v-if="!messages.length" class="empty">开始提问吧（例如：employee_id 字段含义是什么？）</div>
+            <div v-if="!messages.length" class="empty">开始提问吧（例如：入职流程有哪些步骤？）</div>
             <div v-for="(m, i) in messages" :key="i" class="msg" :class="m.role">{{ m.content }}</div>
           </div>
           <div class="row" style="margin-top: 12px">

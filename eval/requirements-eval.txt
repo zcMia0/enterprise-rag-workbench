@@ -1,0 +1,13 @@
+# 测评与语料生成依赖 (只跑 eval/ 时需要, 不影响应用启动)
+# 安装: backend/venv/Scripts/pip install -r eval/requirements-eval.txt
+#
+# 其中 pypdf / python-docx 同时也是"真实解析 PDF / DOCX"的运行依赖,
+# 不装则这两类文件会退化成占位文本(项目仍可启动, 但解析质量下降)。
+
+# 测试语料渲染: PDF / DOCX / 位图
+reportlab==5.1.0
+Pillow==13.0.0
+
+# 原生解析 (与 backend/requirements-optional.txt 保持一致)
+pypdf==4.3.1
+python-docx==1.1.2

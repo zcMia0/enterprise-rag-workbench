@@ -1,0 +1,1849 @@
+{
+  "meta": {
+    "corpus_docs": 62,
+    "time": "2026-11-04 10:40:37"
+  },
+  "mock_mode": true,
+  "ingest": {
+    "rows": [
+      {
+        "filename": "handbook.md",
+        "ext": "md",
+        "complex": true,
+        "curated": true,
+        "route": "native",
+        "route_reason": "text layer present (278 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 828,
+        "naive": {
+          "chunks": 2,
+          "tables_ok": false,
+          "coverage": 0.9982,
+          "success": false
+        },
+        "protected": {
+          "chunks": 2,
+          "tables_ok": true,
+          "coverage": 0.9982,
+          "success": true
+        }
+      },
+      {
+        "filename": "pricing.md",
+        "ext": "md",
+        "complex": true,
+        "curated": true,
+        "route": "native",
+        "route_reason": "text layer present (173 chars, 2 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 2,
+        "text_len": 548,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 5,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "onboarding.md",
+        "ext": "md",
+        "complex": true,
+        "curated": true,
+        "route": "native",
+        "route_reason": "text layer present (152 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 389,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 2,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "meeting_notes.md",
+        "ext": "md",
+        "complex": true,
+        "curated": true,
+        "route": "native",
+        "route_reason": "text layer present (122 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 281,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 2,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract.docx",
+        "ext": "docx",
+        "complex": true,
+        "curated": true,
+        "route": "native",
+        "route_reason": "text layer present (232 chars, 2 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 2,
+        "text_len": 770,
+        "naive": {
+          "chunks": 2,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "tech_spec.docx",
+        "ext": "docx",
+        "complex": true,
+        "curated": true,
+        "route": "native",
+        "route_reason": "text layer present (99 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 1654,
+        "naive": {
+          "chunks": 4,
+          "tables_ok": false,
+          "coverage": 0.9989,
+          "success": false
+        },
+        "protected": {
+          "chunks": 2,
+          "tables_ok": true,
+          "coverage": 0.9989,
+          "success": true
+        }
+      },
+      {
+        "filename": "q_report.pdf",
+        "ext": "pdf",
+        "complex": true,
+        "curated": true,
+        "route": "native",
+        "route_reason": "pdf text layer ok (354 chars / 1p = 354 chars/page) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 353,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "scan_form.png",
+        "ext": "png",
+        "complex": true,
+        "curated": true,
+        "route": "ocr",
+        "route_reason": "image file (no text layer) -> ocr",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 0,
+        "text_len": 216,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "scan_invoice.png",
+        "ext": "png",
+        "complex": true,
+        "curated": true,
+        "route": "ocr",
+        "route_reason": "image file (no text layer) -> ocr",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 0,
+        "text_len": 216,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      }
+    ],
+    "all_rows": [
+      {
+        "filename": "handbook.md",
+        "ext": "md",
+        "complex": true,
+        "curated": true,
+        "route": "native",
+        "route_reason": "text layer present (278 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 828,
+        "naive": {
+          "chunks": 2,
+          "tables_ok": false,
+          "coverage": 0.9982,
+          "success": false
+        },
+        "protected": {
+          "chunks": 2,
+          "tables_ok": true,
+          "coverage": 0.9982,
+          "success": true
+        }
+      },
+      {
+        "filename": "pricing.md",
+        "ext": "md",
+        "complex": true,
+        "curated": true,
+        "route": "native",
+        "route_reason": "text layer present (173 chars, 2 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 2,
+        "text_len": 548,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 5,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "onboarding.md",
+        "ext": "md",
+        "complex": true,
+        "curated": true,
+        "route": "native",
+        "route_reason": "text layer present (152 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 389,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 2,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "meeting_notes.md",
+        "ext": "md",
+        "complex": true,
+        "curated": true,
+        "route": "native",
+        "route_reason": "text layer present (122 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 281,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 2,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract.docx",
+        "ext": "docx",
+        "complex": true,
+        "curated": true,
+        "route": "native",
+        "route_reason": "text layer present (232 chars, 2 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 2,
+        "text_len": 770,
+        "naive": {
+          "chunks": 2,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "tech_spec.docx",
+        "ext": "docx",
+        "complex": true,
+        "curated": true,
+        "route": "native",
+        "route_reason": "text layer present (99 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 1654,
+        "naive": {
+          "chunks": 4,
+          "tables_ok": false,
+          "coverage": 0.9989,
+          "success": false
+        },
+        "protected": {
+          "chunks": 2,
+          "tables_ok": true,
+          "coverage": 0.9989,
+          "success": true
+        }
+      },
+      {
+        "filename": "q_report.pdf",
+        "ext": "pdf",
+        "complex": true,
+        "curated": true,
+        "route": "native",
+        "route_reason": "pdf text layer ok (354 chars / 1p = 354 chars/page) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 353,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "policy.pdf",
+        "ext": "pdf",
+        "complex": false,
+        "curated": true,
+        "route": "native",
+        "route_reason": "pdf text layer ok (250 chars / 1p = 250 chars/page) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 0,
+        "text_len": 249,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "api_spec.txt",
+        "ext": "txt",
+        "complex": false,
+        "curated": true,
+        "route": "native",
+        "route_reason": "text layer present (362 chars, 0 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 0,
+        "text_len": 378,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "faq.txt",
+        "ext": "txt",
+        "complex": false,
+        "curated": true,
+        "route": "native",
+        "route_reason": "text layer present (324 chars, 0 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 0,
+        "text_len": 338,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "scan_form.png",
+        "ext": "png",
+        "complex": true,
+        "curated": true,
+        "route": "ocr",
+        "route_reason": "image file (no text layer) -> ocr",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 0,
+        "text_len": 216,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "scan_invoice.png",
+        "ext": "png",
+        "complex": true,
+        "curated": true,
+        "route": "ocr",
+        "route_reason": "image file (no text layer) -> ocr",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 0,
+        "text_len": 216,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2022_d01.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 526,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2023_d01.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 526,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2024_d01.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 526,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2022_d02.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 526,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2023_d02.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 527,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2024_d02.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 528,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2022_d03.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 530,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2023_d03.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 530,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2024_d03.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 531,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2022_d04.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 531,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2023_d04.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 531,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2024_d04.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 531,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2022_d05.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 532,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2023_d05.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 532,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2024_d05.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 532,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2022_d06.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 532,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2023_d06.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 532,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2024_d06.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 532,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2022_d07.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 532,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2023_d07.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 532,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2024_d07.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 532,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2022_d08.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 532,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2023_d08.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 532,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2024_d08.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 532,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2022_d09.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (347 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 535,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2023_d09.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (347 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 535,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2024_d09.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (347 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 535,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2022_d10.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 532,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2023_d10.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 532,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "travel_2024_d10.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (344 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 532,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c01.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 520,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c02.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 520,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c03.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c04.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c05.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c06.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c07.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c08.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c09.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c10.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c11.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c12.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c13.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c14.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c15.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c16.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c17.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c18.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c19.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      },
+      {
+        "filename": "contract_c20.md",
+        "ext": "md",
+        "complex": true,
+        "curated": false,
+        "route": "native",
+        "route_reason": "text layer present (345 chars, 1 tables) -> native",
+        "route_ok": true,
+        "parsed_ok": true,
+        "n_tables": 1,
+        "text_len": 522,
+        "naive": {
+          "chunks": 1,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        },
+        "protected": {
+          "chunks": 3,
+          "tables_ok": true,
+          "coverage": 1.0,
+          "success": true
+        }
+      }
+    ],
+    "complex_total": 9,
+    "naive": {
+      "hit": 7,
+      "total": 9,
+      "rate": 77.8
+    },
+    "protected": {
+      "hit": 9,
+      "total": 9,
+      "rate": 100.0
+    },
+    "scaled": {
+      "total": 50,
+      "naive_rate": 100.0,
+      "protected_rate": 100.0,
+      "naive_hit": 50,
+      "protected_hit": 50,
+      "protected_total": 50
+    },
+    "route_all_ok": true
+  },
+  "retrieval": {
+    "n": 91,
+    "n_keyword": 60,
+    "n_semantic": 31,
+    "chunks": 176,
+    "summary": {
+      "vector": {
+        "hit5": 58,
+        "hit5_rate": 63.7,
+        "mrr10": 0.5557,
+        "kw_rate": 71.7,
+        "sem_rate": 48.4
+      },
+      "bm25": {
+        "hit5": 74,
+        "hit5_rate": 81.3,
+        "mrr10": 0.7629,
+        "kw_rate": 83.3,
+        "sem_rate": 77.4
+      },
+      "hybrid": {
+        "hit5": 73,
+        "hit5_rate": 80.2,
+        "mrr10": 0.7359,
+        "kw_rate": 81.7,
+        "sem_rate": 77.4
+      }
+    },
+    "best_single_rate": 81.3,
+    "gain_vs_vector_pct": 25.9,
+    "gap_vs_best_pp": -1.1,
+    "overlap": {
+      "both": 57,
+      "only_vector": 1,
+      "only_bm25": 17,
+      "neither": 16
+    },
+    "embedding": "mock-hash"
+  },
+  "gate": {
+    "min_terms": 2,
+    "top_n": 3,
+    "fetch_k": 8,
+    "in_total": 91,
+    "in_accept": 86,
+    "in_rate": 94.5,
+    "in_rejected": [
+      {
+        "q": "request_timeout_ms 的默认值和范围",
+        "usable": false,
+        "matched_terms": [
+          "默认"
+        ],
+        "query_terms": 4,
+        "coverage": 0.25,
+        "reason": "命中内容词 1 个, 低于阈值 2"
+      },
+      {
+        "q": "text_density_threshold 的作用",
+        "usable": false,
+        "matched_terms": [
+          "text_density_threshold"
+        ],
+        "query_terms": 1,
+        "coverage": 1.0,
+        "reason": "命中内容词 1 个, 低于阈值 2"
+      },
+      {
+        "q": "qa_log_retention_days 的取值范围",
+        "usable": false,
+        "matched_terms": [
+          "范围"
+        ],
+        "query_terms": 4,
+        "coverage": 0.25,
+        "reason": "命中内容词 1 个, 低于阈值 2"
+      },
+      {
+        "q": "买的人多单价会更便宜吗",
+        "usable": false,
+        "matched_terms": [
+          "单价"
+        ],
+        "query_terms": 1,
+        "coverage": 1.0,
+        "reason": "命中内容词 1 个, 低于阈值 2"
+      },
+      {
+        "q": "研发花了多少钱占比多少",
+        "usable": false,
+        "matched_terms": [
+          "研发"
+        ],
+        "query_terms": 1,
+        "coverage": 1.0,
+        "reason": "命中内容词 1 个, 低于阈值 2"
+      }
+    ],
+    "out_total": 10,
+    "out_reject": 10,
+    "out_rate": 100.0,
+    "out_leaked": []
+  },
+  "ttft": {
+    "url": "http://127.0.0.1:8000",
+    "requests": 20,
+    "mean_ms": 39.7,
+    "p50_ms": 45.0,
+    "p95_ms": 51.5,
+    "min_ms": 26.5,
+    "max_ms": 52.1
+  }
+}

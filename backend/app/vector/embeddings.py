@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import hashlib
 import math
-import re
 
 from app.config import get_settings
 from app.logging_config import get_logger
@@ -65,19 +64,25 @@ class EmbeddingService:
 
     # ---------------- 确定性 Mock 嵌入 ----------------
     def _mock_embed(self, text: str) -> list[float]:
+        """确定性哈希嵌入: 与 BM25 共用同一套分词口径(CJK 二元组), 再做哈希投影。
+
+        分词口径必须和 BM25 一致 —— 否则同一句话在两条检索路上被切成完全不同的词表,
+        融合排序就成了"把两种互不相干的噪声平均", 实测会让混合检索低于单路。
+        """
+        from app.retrieval.bm25 import tokenize  # 延迟导入, 避免模块级循环引用
+
         vec = [0.0] * self.dim
-        tokens = re.findall(r"[\w\u4e00-\u9fff]+", text.lower())
+        tokens = tokenize(text)
         if not tokens:
             return self._normalize(vec)
-        # 词级 + n-gram 级哈希加权
         for tok in tokens:
             h = int(hashlib.md5(tok.encode("utf-8")).hexdigest(), 16)
-            idx = h % self.dim
-            vec[idx] += 1.0
-            # 字符 bigram, 增强局部相似度
-            for i in range(len(tok) - 1):
-                bh = int(hashlib.md5(tok[i : i + 2].encode("utf-8")).hexdigest(), 16)
-                vec[bh % self.dim] += 0.5
+            vec[h % self.dim] += 1.0
+            # 英文/数字长词补字符 bigram, 增强词形相近(如 timeout / timeouts)的召回
+            if len(tok) > 3 and tok.isascii():
+                for i in range(len(tok) - 1):
+                    bh = int(hashlib.md5(tok[i : i + 2].encode("utf-8")).hexdigest(), 16)
+                    vec[bh % self.dim] += 0.3
         # 归一化 (避免长度主导相似度)
         return self._normalize(vec)
 

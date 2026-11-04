@@ -1,0 +1,91 @@
+{"q": "员工档案里工号的格式要求是什么", "key": "EB-2024-0001", "type": "keyword", "doc": "handbook.md"}
+{"q": "身份证号字段应该怎么存储", "key": "需加密存储", "type": "keyword", "doc": "handbook.md"}
+{"q": "工资卡号字段的展示要求", "key": "需脱敏展示", "type": "keyword", "doc": "handbook.md"}
+{"q": "职级字段的取值有哪些", "key": "P1 至 P9", "type": "keyword", "doc": "handbook.md"}
+{"q": "部门编码的示例是什么", "key": "D-ENG-01", "type": "keyword", "doc": "handbook.md"}
+{"q": "试用期结束日默认多少天", "key": "入职后 90 天", "type": "keyword", "doc": "handbook.md"}
+{"q": "成本中心字段的类型和长度", "key": "cost_center", "type": "keyword", "doc": "handbook.md"}
+{"q": "status 字段 1 和 2 分别代表什么", "key": "1 在职 2 离职", "type": "keyword", "doc": "handbook.md"}
+{"q": "渠道折扣打到 75% 需要谁审批", "key": "销售副总裁", "type": "keyword", "doc": "pricing.md"}
+{"q": "70% 及以下的折扣审批要求", "key": "战略价值说明", "type": "keyword", "doc": "pricing.md"}
+{"q": "标准版 51 到 200 坐席的单价", "key": "169", "type": "keyword", "doc": "pricing.md"}
+{"q": "三年一次性付费的折扣", "key": "七五折", "type": "keyword", "doc": "pricing.md"}
+{"q": "request_timeout_ms 的默认值和范围", "key": "3500", "type": "keyword", "doc": "tech_spec.docx"}
+{"q": "rrf_k 配置项是什么含义", "key": "RRF 平滑常数", "type": "keyword", "doc": "tech_spec.docx"}
+{"q": "evidence_min_score 默认值", "key": "0.02", "type": "keyword", "doc": "tech_spec.docx"}
+{"q": "text_density_threshold 的作用", "key": "路由到 OCR 的密度阈值", "type": "keyword", "doc": "tech_spec.docx"}
+{"q": "max_upload_mb 上限可以设到多少", "key": "上限两百兆", "type": "keyword", "doc": "faq.txt"}
+{"q": "qa_log_retention_days 的取值范围", "key": "7-365", "type": "keyword", "doc": "tech_spec.docx"}
+{"q": "混合检索接口的路径和请求字段", "key": "/api/retrieval/debug", "type": "keyword", "doc": "api_spec.txt"}
+{"q": "流式问答接口的事件类型有哪些", "key": "meta、token、sources", "type": "keyword", "doc": "api_spec.txt"}
+{"q": "逾期付款超过 30 日会怎样", "key": "乙方可暂停服务", "type": "keyword", "doc": "contract.docx"}
+{"q": "违约金按什么比例计算", "key": "每日千分之五", "type": "keyword", "doc": "contract.docx"}
+{"q": "首期付款比例和金额", "key": "30%", "type": "keyword", "doc": "contract.docx"}
+{"q": "三期付款的触发条件", "key": "服务期满且无重大故障", "type": "keyword", "doc": "contract.docx"}
+{"q": "生产发布权限由谁审批", "key": "研发总监", "type": "keyword", "doc": "onboarding.md"}
+{"q": "数据库只读权限的开通时限", "key": "2 工作日", "type": "keyword", "doc": "onboarding.md"}
+{"q": "账号密码多久更换一次", "key": "每九十天", "type": "keyword", "doc": "policy.pdf"}
+{"q": "绝密数据日志保留多少天", "key": "一百八十天", "type": "keyword", "doc": "policy.pdf"}
+{"q": "离职人员账号什么时候禁用", "key": "离职当日", "type": "keyword", "doc": "policy.pdf"}
+{"q": "单租户默认限流每分钟多少次", "key": "六百次", "type": "keyword", "doc": "api_spec.txt"}
+{"q": "新同事来报到以后要办哪些手续", "key": "提交材料、签订协议、开通账号、参加培训", "type": "semantic", "doc": "handbook.md"}
+{"q": "请假的年假天数跟工作年限怎么挂钩", "key": "满五年十五天", "type": "semantic", "doc": "handbook.md"}
+{"q": "生病请假需要准备什么证明材料", "key": "二级以上医疗机构证明", "type": "semantic", "doc": "handbook.md"}
+{"q": "如果培训考试没过怎么办", "key": "补训一次", "type": "semantic", "doc": "handbook.md"}
+{"q": "买的人多单价会更便宜吗", "key": "119", "type": "semantic", "doc": "pricing.md"}
+{"q": "老客户第二年续约能便宜多少", "key": "95%", "type": "semantic", "doc": "pricing.md"}
+{"q": "给客户打折太多会不会影响利润考核", "key": "毛利不得低于 45%", "type": "semantic", "doc": "pricing.md"}
+{"q": "远程办公怎么连公司内网", "key": "内网 VPN", "type": "semantic", "doc": "onboarding.md"}
+{"q": "代码合并到主干前要走什么流程", "key": "Code Review", "type": "semantic", "doc": "onboarding.md"}
+{"q": "开会定下来的检索调优谁来负责", "key": "张工", "type": "semantic", "doc": "meeting_notes.md"}
+{"q": "评测集要扩到多少题", "key": "45 题", "type": "semantic", "doc": "meeting_notes.md"}
+{"q": "这个季度收入同比涨了多少", "key": "百分之十八", "type": "semantic", "doc": "q_report.pdf"}
+{"q": "毛利提升主要靠什么", "key": "云资源成本优化", "type": "semantic", "doc": "q_report.pdf"}
+{"q": "哪块业务毛利最高", "key": "企业软件", "type": "semantic", "doc": "q_report.pdf"}
+{"q": "公司打算往海外发展吗", "key": "新加坡", "type": "semantic", "doc": "q_report.pdf"}
+{"q": "研发花了多少钱占比多少", "key": "百分之二十四", "type": "semantic", "doc": "q_report.pdf"}
+{"q": "服务期满没有大故障那笔钱怎么付", "key": "180000", "type": "semantic", "doc": "contract.docx"}
+{"q": "碰到天灾导致延期要不要赔钱", "key": "不可抗力", "type": "semantic", "doc": "contract.docx"}
+{"q": "传上去的文件多久能被搜到", "key": "十秒内", "type": "semantic", "doc": "faq.txt"}
+{"q": "回答没有给出引用该怎么排查", "key": "evidence_min_score", "type": "semantic", "doc": "faq.txt"}
+{"q": "上传的文件大小有什么限制", "key": "默认五十兆", "type": "semantic", "doc": "faq.txt"}
+{"q": "研发部 2024 年一线城市出差住宿上限是多少", "key": "720 元/晚", "type": "keyword", "doc": "travel_2024_d01.md"}
+{"q": "研发部 2024 年度差旅政策文号", "key": "TRV-2024-D01", "type": "keyword", "doc": "travel_2024_d01.md"}
+{"q": "市场部 2024 年一线城市出差住宿上限是多少", "key": "1020 元/晚", "type": "keyword", "doc": "travel_2024_d02.md"}
+{"q": "市场部 2024 年度差旅政策文号", "key": "TRV-2024-D02", "type": "keyword", "doc": "travel_2024_d02.md"}
+{"q": "销售部 2024 年一线城市出差住宿上限是多少", "key": "1320 元/晚", "type": "keyword", "doc": "travel_2024_d03.md"}
+{"q": "销售部 2024 年度差旅政策文号", "key": "TRV-2024-D03", "type": "keyword", "doc": "travel_2024_d03.md"}
+{"q": "财务部 2024 年一线城市出差住宿上限是多少", "key": "1620 元/晚", "type": "keyword", "doc": "travel_2024_d04.md"}
+{"q": "财务部 2024 年度差旅政策文号", "key": "TRV-2024-D04", "type": "keyword", "doc": "travel_2024_d04.md"}
+{"q": "人力部 2024 年一线城市出差住宿上限是多少", "key": "1920 元/晚", "type": "keyword", "doc": "travel_2024_d05.md"}
+{"q": "人力部 2024 年度差旅政策文号", "key": "TRV-2024-D05", "type": "keyword", "doc": "travel_2024_d05.md"}
+{"q": "法务部 2024 年一线城市出差住宿上限是多少", "key": "2220 元/晚", "type": "keyword", "doc": "travel_2024_d06.md"}
+{"q": "法务部 2024 年度差旅政策文号", "key": "TRV-2024-D06", "type": "keyword", "doc": "travel_2024_d06.md"}
+{"q": "运营部 2024 年一线城市出差住宿上限是多少", "key": "2520 元/晚", "type": "keyword", "doc": "travel_2024_d07.md"}
+{"q": "运营部 2024 年度差旅政策文号", "key": "TRV-2024-D07", "type": "keyword", "doc": "travel_2024_d07.md"}
+{"q": "客服部 2024 年一线城市出差住宿上限是多少", "key": "2820 元/晚", "type": "keyword", "doc": "travel_2024_d08.md"}
+{"q": "客服部 2024 年度差旅政策文号", "key": "TRV-2024-D08", "type": "keyword", "doc": "travel_2024_d08.md"}
+{"q": "供应链部 2024 年一线城市出差住宿上限是多少", "key": "3120 元/晚", "type": "keyword", "doc": "travel_2024_d09.md"}
+{"q": "供应链部 2024 年度差旅政策文号", "key": "TRV-2024-D09", "type": "keyword", "doc": "travel_2024_d09.md"}
+{"q": "设计部 2024 年一线城市出差住宿上限是多少", "key": "3420 元/晚", "type": "keyword", "doc": "travel_2024_d10.md"}
+{"q": "设计部 2024 年度差旅政策文号", "key": "TRV-2024-D10", "type": "keyword", "doc": "travel_2024_d10.md"}
+{"q": "研发的同事 2024 年去二线城市出差, 每天吃饭补贴能报多少", "key": "70 元/天", "type": "semantic", "doc": "travel_2024_d01.md"}
+{"q": "市场的同事 2024 年去二线城市出差, 每天吃饭补贴能报多少", "key": "85 元/天", "type": "semantic", "doc": "travel_2024_d02.md"}
+{"q": "销售的同事 2024 年去二线城市出差, 每天吃饭补贴能报多少", "key": "100 元/天", "type": "semantic", "doc": "travel_2024_d03.md"}
+{"q": "财务的同事 2024 年去二线城市出差, 每天吃饭补贴能报多少", "key": "115 元/天", "type": "semantic", "doc": "travel_2024_d04.md"}
+{"q": "人力的同事 2024 年去二线城市出差, 每天吃饭补贴能报多少", "key": "130 元/天", "type": "semantic", "doc": "travel_2024_d05.md"}
+{"q": "和恒远科技签的技术服务合同编号是多少", "key": "CT-2024-C01", "type": "keyword", "doc": "contract_c01.md"}
+{"q": "和锐达数据签的技术服务合同编号是多少", "key": "CT-2024-C02", "type": "keyword", "doc": "contract_c02.md"}
+{"q": "和云启智能签的技术服务合同编号是多少", "key": "CT-2024-C03", "type": "keyword", "doc": "contract_c03.md"}
+{"q": "和博晟软件签的技术服务合同编号是多少", "key": "CT-2024-C04", "type": "keyword", "doc": "contract_c04.md"}
+{"q": "和天工机械签的技术服务合同编号是多少", "key": "CT-2024-C05", "type": "keyword", "doc": "contract_c05.md"}
+{"q": "和联信网络签的技术服务合同编号是多少", "key": "CT-2024-C06", "type": "keyword", "doc": "contract_c06.md"}
+{"q": "和华洋物流签的技术服务合同编号是多少", "key": "CT-2024-C07", "type": "keyword", "doc": "contract_c07.md"}
+{"q": "和中科微电签的技术服务合同编号是多少", "key": "CT-2024-C08", "type": "keyword", "doc": "contract_c08.md"}
+{"q": "和远东能源签的技术服务合同编号是多少", "key": "CT-2024-C09", "type": "keyword", "doc": "contract_c09.md"}
+{"q": "和盛元传媒签的技术服务合同编号是多少", "key": "CT-2024-C10", "type": "keyword", "doc": "contract_c10.md"}
+{"q": "帮我找一下凯盛医疗那份技术服务合同的文号", "key": "CT-2024-C11", "type": "semantic", "doc": "contract_c11.md"}
+{"q": "帮我找一下朗新环保那份技术服务合同的文号", "key": "CT-2024-C12", "type": "semantic", "doc": "contract_c12.md"}
+{"q": "帮我找一下金鼎建材那份技术服务合同的文号", "key": "CT-2024-C13", "type": "semantic", "doc": "contract_c13.md"}
+{"q": "帮我找一下海川航运那份技术服务合同的文号", "key": "CT-2024-C14", "type": "semantic", "doc": "contract_c14.md"}
+{"q": "帮我找一下同辉电子那份技术服务合同的文号", "key": "CT-2024-C15", "type": "semantic", "doc": "contract_c15.md"}

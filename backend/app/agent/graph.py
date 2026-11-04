@@ -3,7 +3,7 @@
 流程 (与 LangGraph 状态机等价, 可选接入 langgraph):
     [RETRIEVE] 预检索证据 (Prefetch, 强制先查知识库)
         │
-    [ADJUDICATE] 证据裁判: 证据是否充分? 不充分则标记 used_knowledge=False (防编造)
+    [ADJUDICATE] 证据裁判: 问题内容词在证据里命中不足则拒答 (防编造), 见 app/retrieval/gate.py
         │
     [GENERATE] 基于证据流式生成, 逐 token 推送给前端
 
@@ -21,6 +21,8 @@ from app.agent.tools import retrieval_tool
 from app.config import get_settings
 from app.db.redis_client import redis_client
 from app.logging_config import get_logger
+from app.retrieval.gate import judge_evidence
+from app.retrieval.hybrid import get_retrieval_service
 
 log = get_logger("agent", "GRAPH")
 
@@ -93,12 +95,37 @@ class AgentService:
         tool_res = retrieval_tool(db, query, top_k=8)
         evidence = tool_res.evidence
 
-        # [ADJUDICATE] 证据裁判
-        used_knowledge = len(evidence) > 0
-        log.info(
-            f"[EVIDENCE] adjudication -> used_knowledge={used_knowledge}, "
-            f"hits={len(evidence)}"
+        # [ADJUDICATE] 证据裁判: 不是"有没有召回", 而是"召回的东西能不能支撑回答"。
+        # 只用 len(evidence) > 0 判定等于没判 —— 检索永远返回 Top-K, 库里没答案时
+        # 也照样有 8 条最不相关里最像的片段, 直接喂给模型就会编。
+        gate = judge_evidence(
+            query,
+            evidence,
+            vocabulary=get_retrieval_service().bm25.idf,
         )
+        used_knowledge = gate.usable and len(evidence) > 0
+        if not used_knowledge:
+            evidence = []
+        log.info(f"[EVIDENCE] adjudication -> {gate.as_dict()}")
+
+        # 拒答分支: 无可用证据时直接如实告知, 不进入生成 (Mock 与真实 LLM 一致行为)
+        if not used_knowledge:
+            refusal = (
+                "知识库中没有找到与这个问题相关的内容，为避免编造，我不作推测性回答。\n\n"
+                "建议：换用文档里出现过的说法（如字段名、制度名、编号）再问一次，"
+                "或确认相关文档已入库。"
+            )
+            for tok in refusal:
+                yield {"type": "token", "data": tok}
+            yield {"type": "sources", "data": []}
+            self._persist_qa(db, thread_id, query, refusal, [], False)
+            self.save_turn(thread_id, "user", query)
+            self.save_turn(thread_id, "assistant", refusal)
+            yield {
+                "type": "done",
+                "data": {"used_knowledge": False, "gate": gate.as_dict()},
+            }
+            return
 
         # 组装 prompt
         history = self.load_history(thread_id)
@@ -148,7 +175,7 @@ class AgentService:
         self.save_turn(thread_id, "user", query)
         self.save_turn(thread_id, "assistant", answer)
 
-        yield {"type": "done", "data": {"used_knowledge": used_knowledge}}
+        yield {"type": "done", "data": {"used_knowledge": used_knowledge, "gate": gate.as_dict()}}
 
     def _persist_qa(self, db, thread_id, question, answer, sources, used_knowledge) -> None:  # noqa: ANN001
         from app.db.models import QALog

@@ -49,6 +49,9 @@ def _split_text_window(text: str, size: int, overlap: int) -> list[str]:
         else:
             if buf:
                 chunks.append(buf)
+                # 必须清空: 否则当前段落走"硬切"分支时, 旧缓冲会被后续段落的
+                # "buf + p" 再次带上, 造成内容重复入库(白占 token 预算)
+                buf = ""
             # 单段超长 -> 硬切
             if len(p) > size:
                 start = 0

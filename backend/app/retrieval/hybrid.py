@@ -106,8 +106,11 @@ class RetrievalService:
         for r in bm_res:
             r["source"] = "bm25"
 
-        # 3) RRF 融合
-        fused = rrf_fuse([vec_res, bm_res])
+        # 3) RRF 融合 (按各路上限质量加权: 向量路权重可配置, 避免弱嵌入稀释词面召回)
+        fused = rrf_fuse(
+            [vec_res, bm_res],
+            weights=[_settings.rrf_weight_vector, _settings.rrf_weight_bm25],
+        )
         fused = fused[: max(top_k, _settings.hybrid_fetch_k)]
 
         # 4) 组装命中 (回填 meta + 各来源分)

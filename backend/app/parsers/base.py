@@ -33,11 +33,18 @@ class ParsedDocument:
 
     @property
     def text_density(self) -> float:
-        """文本密度: 文本字符占比 (0~1)。越低越像扫描件, 越需要 OCR。"""
-        total = self.text_length + self.table_count * 500 + self.image_count * 1000
+        """文本密度: 纯文本字符 / (纯文本 + 表格 + 图片占位) 字符, 取值 0~1。
+
+        含义是"可提取内容里有多少比例是普通段落文字", 表格与图片占比越高该值越低。
+        注意: **不要**再用它判断是否为扫描件 —— 表格密集的正常文档密度同样很低。
+        是否为扫描件由 ``parsers.router`` 依据"PDF 是否存在文本层"判断。
+        """
+        text_chars = sum(len(b.content) for b in self.blocks if b.type == "text")
+        other_chars = sum(len(b.content) for b in self.blocks if b.type != "text")
+        total = text_chars + other_chars
         if total == 0:
             return 1.0
-        return round(self.text_length / total, 4)
+        return round(text_chars / total, 4)
 
     def to_text(self) -> str:
         parts = []

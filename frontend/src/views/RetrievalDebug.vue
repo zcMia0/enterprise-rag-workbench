@@ -2,8 +2,8 @@
 import { ref } from 'vue'
 import { retrievalApi, type RetrievalHit } from '@/api'
 
-const query = ref('employee_id 是什么类型')
-const topK = ref(5)
+const query = ref('emp_no 字段的类型和格式要求')
+const topK = ref(3)
 const hits = ref<RetrievalHit[]>([])
 const loading = ref(false)
 const error = ref('')

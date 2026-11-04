@@ -16,7 +16,7 @@ from app.db.models import Chunk, ChunkVector, Document, Section
 from app.logging_config import get_logger
 from app.parsers.native import parse_native
 from app.parsers.ocr import parse_ocr
-from app.parsers.router import choose_path
+from app.parsers.router import IMAGE_TYPES, choose_path
 from app.retrieval.hybrid import get_retrieval_service
 from app.vector.embeddings import EmbeddingService
 from app.vector.milvus_client import get_vector_store
@@ -44,16 +44,20 @@ def process_upload(db: Session, filename: str, content: bytes) -> dict:
     with open(disk_path, "wb") as f:
         f.write(content)
 
-    # 启发式路由: 先原生探测密度 (pdf 场景尤其有用)
-    probe = parse_native(disk_path, file_type)
-    path, reason = choose_path(file_type, probe)
+    # 启发式路由: 图像文件无需探测(必然无文本层), 其它类型先原生探测再决策
+    probe = None
+    if file_type in IMAGE_TYPES:
+        path, reason = choose_path(file_type, None)
+    else:
+        probe = parse_native(disk_path, file_type)
+        path, reason = choose_path(file_type, probe)
     log.info(f"[ROUTER] chose '{path}' path ({reason})")
 
     if path == "ocr":
         parsed = parse_ocr(disk_path, file_type)
         parse_path = "ocr"
     else:
-        parsed = probe
+        parsed = probe if probe is not None else parse_native(disk_path, file_type)
         parse_path = "native"
     log.info(
         f"[PARSE] tables={parsed.table_count} images={parsed.image_count} "

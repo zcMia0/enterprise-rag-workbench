@@ -48,6 +48,7 @@ Thumbs.db
 *.tsbuildinfo
 vite.config.js
 vite.config.d.ts
+vite.config.ts.timestamp-*.mjs
 
 # ===== 日志 =====
 *.log
