@@ -1,0 +1,21 @@
+# 可选依赖: 启用真实外部服务时按需安装 (非 Mock 模式)。
+# 安装示例: pip install -r requirements-optional.txt
+
+# PostgreSQL 驱动 (使用真实 PG 时)
+psycopg[binary]==3.2.1
+
+# Milvus 向量库 (使用真实 Milvus 时)
+pymilvus==2.4.13
+
+# 大模型 / 嵌入 (DashScope / OpenAI 兼容)
+openai==1.40.1
+
+# LangGraph 编排 (可选)
+langgraph==0.2.20
+
+# 原生解析
+pypdf==4.3.1
+python-docx==1.1.2
+
+# OCR (RapidOCR 轻量; PaddleOCR 更重)
+rapidocr-onnxruntime==1.3.21
