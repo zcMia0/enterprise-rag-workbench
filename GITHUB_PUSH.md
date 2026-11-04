@@ -1,11 +1,11 @@
-# 推**送到 GitHub 指南（本仓**库已本地提交，待你执行推送）
+# 推送到 GitHub 指南（本仓库已本地提交，待你执行推送）
 
-> 沙箱环境无法连通 github.com（`curl` 超时）且未安装 `gh` CLI，因此**实际推送需在你的本机终端完成**（网络 + 你的 GitHub 凭据都在本机）。  
+> 沙箱环境无法连通 github.com（`curl` 超时）且未安装 `gh` CLI，因此**实际推送需在你的本机终端完成**（网络 + 你的 GitHub 凭据都在本机）。
 > 下方命令直接复制粘贴即可，把 `<你的GitHub用户名>` 换成真实用户名。
 
 ## 方式 A（推荐）：网页建仓 + 本机推送
 
-1. 打开 <https://github.com/new>
+1. 打开 https://github.com/new
 2. Repository name 填：`enterprise-rag-workbench`
 3. **不要**勾选 "Add a README file" / "Add .gitignore"（仓库已有）
 4. 点 **Create repository**
@@ -20,7 +20,7 @@ git push -u origin master
 
 ## 方式 B：用 GitHub CLI（`gh`）一键建仓并推送
 
-本机先安装并登录 `gh`（Windows：`winget install GitHub.cli` 或 <https://cli.github.com> ）：
+本机先安装并登录 `gh`（Windows：`winget install GitHub.cli` 或 https://cli.github.com ）：
 
 ```bash
 gh auth login
